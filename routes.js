@@ -29,6 +29,11 @@ function ensureAccount(req, res, next) {
 }
 
 exports = module.exports = function(app, passport) {
+
+  //events
+  app.get('/events/', require('./views/events/index').find);
+  app.get('/events/:id/', require('./views/events/index').details);
+
   //front end
   app.get('/', require('./views/index').init);
   app.get('/about/', require('./views/about/index').init);
