@@ -32,7 +32,10 @@ exports = module.exports = function(app, passport) {
 
   //events
   app.get('/events/', require('./views/events/index').find);
-  app.get('/events/:id/', require('./views/events/index').details);
+  app.get('/events/add/', require('./views/events/index').init);
+  app.get('/events/:id/', require('./views/events/index').read);
+  app.post('/events/add/', require('./views/events/index').create);
+  app.get('/account/myevents/', require('./views/myevents/index').find);
 
   //front end
   app.get('/', require('./views/index').init);

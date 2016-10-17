@@ -1,0 +1,30 @@
+extends ../../layouts/default
+
+block head
+  title Event Details
+
+block neck
+  link(rel='stylesheet', href='/views/index.min.css?#{cacheBreaker}')
+
+block body
+  .row
+    .col-md-6
+      .page-header
+        h1 Add Event
+  .row
+    .col-md-6
+      form(method='POST' action='/events/add')
+        .form-group
+          label(for='title') Title:
+          input.form-control(type='text', name='title')
+        .form-group
+          label(for='description') Description:
+          textarea.form-control(type='text', name='description')
+        .form-group
+          label(for='startEvent') Start Event:
+          input.form-control(type='text', name='startEvent')
+        .form-group
+          label(for='endEvent') End Event:
+          input.form-control(type='text', name='endEvent')
+        button.btn.btn-primary(type='submit') Submit
+      

@@ -8,9 +8,11 @@ exports.find = function(req, res, next){
 
   var filters = {};
 
+  filters.username = req.user.username;
+
   req.app.db.models.Event.pagedFind({
     filters: filters,
-    keys: 'username title description',
+    keys: 'username title description date',
     limit: req.query.limit,
     page: req.query.page,
     sort: req.query.sort
@@ -27,7 +29,7 @@ exports.find = function(req, res, next){
     else {
       results.filters = req.query;
       console.log(results);
-      res.render('events/index', { 'data': results.data });      
+      res.render('myevents/index', { 'data': results.data });      
     }
   });
 };

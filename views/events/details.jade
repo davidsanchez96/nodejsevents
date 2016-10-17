@@ -12,14 +12,14 @@ block feet
 block body
   div.row
     div.col-xs-6
-      div.page-header        
-        .panel.panel-primary
-          .panel-heading
-            h1 Title: #{event.title}
-          .panel-body            
-            p By: #{event.username}
-            p Description: #{event.description}
-            p Date: #{event.date}
-            p Start Event: #{event.startEvent}
-            p End Event: #{event.endEvent}
-            a.btn.btn-primary(href='/events/', role='button') Go back
+      .page-header
+      .panel.panel-primary
+        .panel-heading
+          h1 Title: #{event.title}
+        .panel-body            
+          p By: #{event.username}
+          p Description: #{event.description}
+          p Date: #{event.date}
+          p Start Event: #{event.startEvent}
+          p End Event: #{event.endEvent}
+          a.btn.btn-primary(href='/events/', role='button') Go back

@@ -11,11 +11,13 @@ block feet
 
 block body
   div.row
-    div.col-xs-6
+    div.col-md-12
       div.page-header
         h1 Events
-      .panel-group
-        each event in data
+  div.row
+    div.col-md-12
+      each event in data
+        div.col-md-4
           .panel.panel-primary
             .panel-heading
               h3 Title: #{event.title}
