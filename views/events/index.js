@@ -98,7 +98,7 @@ exports.create = function(req, res, next){
       //workflow.outcome.record = event;
       //return workflow.emit('response');
 
-      res.redirect('/');
+      res.redirect('/account/myevents/');
 
     });
   });

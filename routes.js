@@ -35,7 +35,12 @@ exports = module.exports = function(app, passport) {
   app.get('/events/add/', require('./views/events/index').init);
   app.get('/events/:id/', require('./views/events/index').read);
   app.post('/events/add/', require('./views/events/index').create);
+
+  //myevents
   app.get('/account/myevents/', require('./views/myevents/index').find);
+  app.get('/account/myevents/update/:id', require('./views/myevents/index').init);
+  app.post('/account/myevents/update/:id', require('./views/myevents/index').update);
+  app.get('/account/myevents/delete/:id', require('./views/myevents/index').delete);
 
   //front end
   app.get('/', require('./views/index').init);

@@ -35,10 +35,10 @@ block body
                 a.button.btn.btn-default(href='/events/#{event._id}', role='button')
                   i.fa.fa-eye
                   |  View
-                a.button.btn.btn-primary(href='/events/#{event._id}', role='button')
+                a.button.btn.btn-primary(href='/account/myevents/update/#{event._id}', role='button')
                   i.fa.fa-pencil
                   |  Edit
-                a.button.btn.btn-danger(href='/events/#{event._id}', role='button')
+                a.button.btn.btn-danger(href='/account/myevents/delete/#{event._id}', role='button')
                   i.fa.fa-trash
                   |  Delete
       
