@@ -6,7 +6,7 @@ exports.mongodb = {
 };
 exports.companyName = 'NodeJS Community Events';
 exports.projectName = 'NodeJS Community Events';
-exports.systemEmail = 'deividsanchez96@gmail.com';
+exports.systemEmail = 'davidtestemail96@gmail.com';
 exports.cryptoKey = 'k3yb0ardc4t';
 exports.loginAttempts = {
   forIp: 50,
@@ -17,11 +17,11 @@ exports.requireAccountVerification = false;
 exports.smtp = {
   from: {
     name: process.env.SMTP_FROM_NAME || exports.projectName +' Website',
-    address: process.env.SMTP_FROM_ADDRESS || 'deividsanchez96@gmail.com'
+    address: process.env.SMTP_FROM_ADDRESS || 'davidtestemail96@gmail.com'
   },
   credentials: {
-    user: process.env.SMTP_USERNAME || 'deividsanchez96@gmail.com',
-    password: process.env.SMTP_PASSWORD || 'david9663A',
+    user: process.env.SMTP_USERNAME || 'davidtestemail96@gmail.com',
+    password: process.env.SMTP_PASSWORD || 'test9663A',
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     ssl: true
   }
